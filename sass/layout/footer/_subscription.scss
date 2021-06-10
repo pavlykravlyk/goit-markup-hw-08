@@ -1,0 +1,56 @@
+.subscription {
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
+}
+
+.subscription__title {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: getColor("white");
+}
+
+.subscription__label {
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscription__input {
+  max-width: 450px;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: getColor("hero");
+  color: getColor("white");
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
+}
+
+.subscription__button {
+  display: block;
+  align-items: center;
+  margin: 0 auto;
+  @include button();
+
+  @media screen and (min-width: 1200px) {
+    display: inline-flex;
+    margin-left: 12px;
+  }
+}
+
+.subscription__icon {
+  fill: currentColor;
+  margin-left: 10px;
+}

@@ -1,0 +1,9 @@
+.page-footer__logo {
+  @extend %logo;
+  margin-bottom: 20px;
+  color: getColor("accent-light");
+}
+
+.page-footer__logo--accent {
+  color: getColor("white");
+}

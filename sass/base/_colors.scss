@@ -1,0 +1,22 @@
+$colors: (
+  "accent-light": #2196f3,
+  "accent-dark": #188ce8,
+  "bg-secondary": #f5f4fa,
+  "text": #757575,
+  "title": #212121,
+  "hero": #2f303a,
+  "white": white,
+  "black": black,
+  "bg-icon": #afb1b8,
+  "header-border": #ececec,
+  "portfolio-card-border": #eeeeee,
+  "overlay": rgba(33, 150, 243, 0.9),
+  "backdrop": rgba(0, 0, 0, 0.2),
+  "placeholder": rgba(117, 117, 117, 0.5),
+  "modal-field-border": rgba(33, 33, 33, 0.2),
+  "modal-btn-border": rgba(0, 0, 0, 0.1),
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}

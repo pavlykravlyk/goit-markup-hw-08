@@ -1,0 +1,30 @@
+.page-footer {
+  background-color: getColor("hero");
+}
+
+.page-footer__content {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 0;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+    text-align: left;
+  }
+}
+
+.page-footer__tablet {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+}
+
+.page-footer__links {
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
+}

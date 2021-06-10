@@ -1,0 +1,33 @@
+@mixin centeredFlex($type: flex) {
+  display: $type;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button(
+  $color: getColor("white"),
+  $background-color: getColor("accent-light")
+) {
+  min-width: 200px;
+  padding: 10px 30px;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.86;
+  letter-spacing: 0.06em;
+
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  color: getColor("white");
+  background-color: getColor("accent-light");
+  box-shadow: $button-shadow;
+  transition: background-color 250ms $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    background-color: getColor("accent-dark");
+  }
+}

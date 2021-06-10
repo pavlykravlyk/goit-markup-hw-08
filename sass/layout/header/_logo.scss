@@ -1,0 +1,8 @@
+.navigation__logo {
+  @extend %logo;
+  color: getColor("accent-light");
+}
+
+.navigation__logo--accent {
+  color: getColor("black");
+}

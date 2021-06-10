@@ -1,0 +1,51 @@
+.features {
+  padding-bottom: 47px;
+}
+
+.features__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: calc(-1 * #{$gridItemMargin});
+  margin-left: calc(-1 * #{$gridItemMargin});
+}
+
+.features__item {
+  flex-basis: calc(100% / 4 - #{$gridItemMargin});
+  margin-left: $gridItemMargin;
+  margin-top: $gridItemMargin;
+}
+
+.features__icon--bg {
+  @include centeredFlex();
+  height: 120px;
+  width: 100%;
+
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-color: getColor("bg-secondary");
+}
+
+.features__icon {
+  color: getColor("accent-light");
+}
+
+.features__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: getColor("title");
+}
+
+.features__text {
+  padding: 0;
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.71;
+}
