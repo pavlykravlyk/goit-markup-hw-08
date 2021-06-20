@@ -1,7 +1,19 @@
 .page-footer__logo {
-  @extend %logo;
+  display: inline-block;
   margin-bottom: 20px;
+
+  font-family: $logo-font;
+  font-size: 24px;
+  line-height: 1.17;
+  font-weight: 700;
+
+  text-decoration: none;
   color: getColor("accent-light");
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .page-footer__logo--accent {

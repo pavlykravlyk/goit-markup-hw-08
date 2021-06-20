@@ -1,17 +1,20 @@
 .page-header {
   border-bottom: 1px solid getColor("header-border");
-  display: none;
-}
 
-.page-header__content {
-  margin-bottom: 0;
-
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 767px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
-  @media screen and (min-width: 1200px) {
+  &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (min-width: 768px) {
+    }
+
+    @media screen and (min-width: 1200px) {
+    }
   }
 }

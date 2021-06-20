@@ -4,8 +4,16 @@
 }
 
 .navigation__list {
-  display: flex;
-  margin-left: 93px;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 }
 
 .navigation__item:not(:last-child) {

@@ -10,20 +10,26 @@
 }
 
 body {
-  background-color: getColor("white");
-  color: getColor("text");
-
   font-family: $main-font;
   letter-spacing: 0.03em;
+
+  background-color: white;
+
+  color: #757575;
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   margin-top: 0px;
 
   font-size: 36px;
@@ -31,4 +37,8 @@ body {
   text-align: center;
 
   color: getColor("title");
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }

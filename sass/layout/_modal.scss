@@ -9,7 +9,15 @@
   visibility: visible;
   opacity: 1;
 
+  overflow-x: scroll;
+  overflow-y: scroll;
+
   transition: opacity 250ms $cubic-bezier, visibility 250ms $cubic-bezier;
+
+  @media screen and (max-height: 609px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .is-hidden {
@@ -24,22 +32,32 @@
 
 .modal {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  transform: scale(1);
   padding: 40px;
-  min-width: 528px;
-  min-height: 581px;
-  transform: translate(-50%, -50%) scale(1);
+  min-width: 450px;
+
+  overflow: hidden;
 
   background-color: getColor("white");
 
   transition: transform 250ms $cubic-bezier;
+
+  @media screen and (min-height: 609px) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 528px;
+  }
 }
 
 .modal__button--close {
   position: absolute;
   top: 8px;
   right: 8px;
+  padding: 0;
   width: 30px;
   height: 30px;
   @include centeredFlex();
@@ -65,17 +83,30 @@
 .modal__title {
   display: block;
   margin: 0 auto 12px auto;
+  max-width: 370px;
 
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
 
   color: getColor("title");
+
+  @media screen and (min-width: 1200px) {
+    line-height: 1.15;
+    max-width: unset;
+  }
 }
 
 .modal__form {
-  width: 448px;
+  width: 370px;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 448px;
+  }
 }
 
 .modal__field {
@@ -134,12 +165,18 @@
 
 .policy {
   @include centeredFlex();
+  flex-wrap: wrap;
 
   margin-top: 20px;
   margin-bottom: 30px;
 
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .policy__checkbox {
