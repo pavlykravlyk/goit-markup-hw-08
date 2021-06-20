@@ -11,4 +11,5 @@
   mobileBtnClose.addEventListener("click", () => {
     mobileMenuRef.classList.toggle("is-open");
   });
+
 })();
