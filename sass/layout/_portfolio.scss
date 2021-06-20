@@ -80,7 +80,6 @@
 
   &__link {
     display: block;
-
     transition: box-shadow 250ms $cubic-bezier;
 
     &:hover,
@@ -91,6 +90,12 @@
         opacity: 1;
         transform: translateY(0);
       }
+    }
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
   }
 
@@ -131,6 +136,10 @@
     border-bottom: 1px solid getColor("portfolio-card-border");
     border-left: 1px solid getColor("portfolio-card-border");
     border-right: 1px solid getColor("portfolio-card-border");
+
+    @media screen and (min-width: 768px) {
+      flex-grow: 1;
+    }
   }
 
   &__title {
