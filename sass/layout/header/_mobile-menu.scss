@@ -13,12 +13,17 @@
   visibility: hidden;
   pointer-events: none;
 
-  transition: opacity 250ms $cubic-bezier, visibility 250ms $cubic-bezier;
+  transform: translateY(-100%);
+
+  transition: opacity 250ms $cubic-bezier, transform 250ms $cubic-bezier,
+    visibility 250ms $cubic-bezier;
 
   &.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+
+    transform: translateY(0);
   }
 
   &__container {
@@ -68,7 +73,7 @@
   }
 
   &__navigation {
-    margin-bottom: 380px;
+    margin-bottom: 250px;
   }
 
   &__navigation-item {

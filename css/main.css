@@ -113,13 +113,15 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(-100%);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  transform: translateY(0);
 }
 
 .mobile-menu__container {
@@ -167,7 +169,7 @@ body {
 }
 
 .mobile-menu__navigation {
-  margin-bottom: 380px;
+  margin-bottom: 250px;
 }
 
 .mobile-menu__navigation-item:not(:last-child) {
