@@ -13,6 +13,8 @@
   visibility: hidden;
   pointer-events: none;
 
+  transition: opacity 250ms $cubic-bezier, visibility 250ms $cubic-bezier;
+
   &.is-open {
     opacity: 1;
     visibility: visible;
@@ -127,7 +129,6 @@
 
   &__social-list {
     display: flex;
-    // justify-content: center;
     flex-wrap: wrap;
   }
 
