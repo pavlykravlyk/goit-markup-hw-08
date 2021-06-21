@@ -2,14 +2,12 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    align-content: space-between;
-    min-height: 90px;
     margin-bottom: 40px;
+    margin-left: -8px;
+    margin-top: -15px;
 
     @media screen and (min-width: 768px) {
-      display: flex;
       justify-content: center;
-      min-height: unset;
       margin-bottom: 30px;
     }
 
@@ -18,8 +16,9 @@
     }
   }
 
-  &__item:not(:last-child) {
-    margin-right: 8px;
+  &__item {
+    margin-left: 8px;
+    margin-top: 15px;
   }
 
   &__button {

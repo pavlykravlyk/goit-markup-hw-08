@@ -711,16 +711,14 @@ body.modal-open {
 .filter__list {
   display: flex;
   flex-wrap: wrap;
-  align-content: space-between;
-  min-height: 90px;
   margin-bottom: 40px;
+  margin-left: -8px;
+  margin-top: -15px;
 }
 
 @media screen and (min-width: 768px) {
   .filter__list {
-    display: flex;
     justify-content: center;
-    min-height: unset;
     margin-bottom: 30px;
   }
 }
@@ -731,8 +729,9 @@ body.modal-open {
   }
 }
 
-.filter__item:not(:last-child) {
-  margin-right: 8px;
+.filter__item {
+  margin-left: 8px;
+  margin-top: 15px;
 }
 
 .filter__button {
