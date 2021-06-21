@@ -1,63 +1,65 @@
 .features {
   padding-bottom: 47px;
-}
 
-.features__list {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
+  &__list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
 
-    margin-top: calc(-1 * #{$gridItemMargin});
-    margin-left: calc(-1 * #{$gridItemMargin});
+      margin-top: calc(-1 * #{$gridItemMargin});
+      margin-left: calc(-1 * #{$gridItemMargin});
+    }
   }
-}
 
-.features__item {
-  &:not(:last-child) {
+  &__item {
+    &:not(:last-child) {
+      @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(100% / 2 - #{$gridItemMargin});
+      margin-left: $gridItemMargin;
+      margin-top: $gridItemMargin;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc(100% / 4 - #{$gridItemMargin});
+      margin-left: $gridItemMargin;
+      margin-top: $gridItemMargin;
+    }
+  }
+
+  &__icon--bg {
+    @include centeredFlex();
+    height: 120px;
+    width: 100%;
+
+    border-radius: 4px;
     margin-bottom: 30px;
+    background-color: getColor("bg-secondary");
   }
-  @media screen and (min-width: 768px) {
-    flex-basis: calc(100% / 2 - #{$gridItemMargin});
-    margin-left: $gridItemMargin;
-    margin-top: $gridItemMargin;
+
+  &__icon {
+    color: getColor("accent-light");
   }
-  @media screen and (min-width: 1200px) {
-    flex-basis: calc(100% / 4 - #{$gridItemMargin});
-    margin-left: $gridItemMargin;
-    margin-top: $gridItemMargin;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+
+    color: getColor("title");
   }
-}
 
-.features__icon--bg {
-  @include centeredFlex();
-  height: 120px;
-  width: 100%;
+  &__text {
+    padding: 0;
+    margin: 0;
 
-  border-radius: 4px;
-  margin-bottom: 30px;
-  background-color: getColor("bg-secondary");
-}
-
-.features__icon {
-  color: getColor("accent-light");
-}
-
-.features__title {
-  margin-top: 0;
-  margin-bottom: 10px;
-
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-
-  color: getColor("title");
-}
-
-.features__text {
-  padding: 0;
-  margin: 0;
-
-  font-size: 14px;
-  line-height: 1.71;
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }

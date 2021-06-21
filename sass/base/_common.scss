@@ -13,13 +13,13 @@ body {
   font-family: $main-font;
   letter-spacing: 0.03em;
 
-  background-color: white;
+  background-color: getColor("white");
 
-  color: #757575;
-}
+  color: getColor("text");
 
-body.modal-open {
-  overflow: hidden;
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 .section {
@@ -30,19 +30,19 @@ body.modal-open {
     padding-top: 94px;
     padding-bottom: 94px;
   }
-}
 
-.section-title {
-  margin-bottom: 30px;
-  margin-top: 0px;
+  &-title {
+    margin-bottom: 30px;
+    margin-top: 0px;
 
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
 
-  color: getColor("title");
+    color: getColor("title");
 
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 50px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
   }
 }

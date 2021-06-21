@@ -1,30 +1,43 @@
 .page-footer {
   background-color: getColor("hero");
-}
 
-.page-footer__content {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  margin-bottom: 0;
-  text-align: center;
+  &__container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 0;
+    text-align: center;
 
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    align-items: baseline;
-    text-align: left;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: baseline;
+      text-align: left;
+    }
   }
-}
 
-.page-footer__tablet {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-around;
+  &__tablet {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-around;
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: baseline;
+    }
   }
-}
 
-.page-footer__links {
-  @media screen and (min-width: 1200px) {
-    margin-right: 70px;
+  &__links {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 70px;
+    }
   }
 }
