@@ -59,6 +59,9 @@
     padding: 0;
     cursor: pointer;
     background-color: transparent;
+    border: 1px solid getColor("modal-btn-border");
+    border-radius: 50%;
+    line-height: 0;
 
     transition: color 250ms $cubic-bezier;
 
