@@ -2,22 +2,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 
   background-color: getColor("backdrop");
   visibility: visible;
   opacity: 1;
 
-  overflow-x: scroll;
-  overflow-y: scroll;
-
   transition: opacity 250ms $cubic-bezier, visibility 250ms $cubic-bezier;
-
-  @media screen and (max-height: 609px) {
-    display: flex;
-    justify-content: center;
-  }
 }
 
 .is-hidden {
@@ -26,145 +18,140 @@
   pointer-events: none;
 
   & .modal {
-    transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-50% -50%) scale(0.9);
   }
 }
 
 .modal {
+  display: block;
   position: absolute;
-  transform: scale(1);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 450px;
+  max-width: 100%;
+  max-height: 100%;
   padding: 40px;
-  min-width: 450px;
 
-  overflow: hidden;
-
+  overflow-y: scroll;
   background-color: getColor("white");
-
   transition: transform 250ms $cubic-bezier;
-
-  @media screen and (min-height: 609px) {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-  }
 
   @media screen and (min-width: 1200px) {
     min-width: 528px;
   }
-}
 
-.modal__button--close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  padding: 0;
-  width: 30px;
-  height: 30px;
-  @include centeredFlex();
+  &__button--close {
+    z-index: 1;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    @include centeredFlex();
 
-  cursor: pointer;
-  border: 1px solid getColor("modal-btn-border");
-  border-radius: 50%;
-  background-color: getColor("white");
-  outline-color: getColor("accent-light");
+    cursor: pointer;
+    border: 1px solid getColor("modal-btn-border");
+    border-radius: 50%;
+    background-color: getColor("white");
+    outline-color: getColor("accent-light");
 
-  transition: color 250ms $cubic-bezier;
+    transition: color 250ms $cubic-bezier;
 
-  &:hover,
-  &:focus {
-    color: getColor("accent-light");
-  }
-}
-
-.modal__icon--close {
-  fill: currentColor;
-}
-
-.modal__title {
-  display: block;
-  margin: 0 auto 12px auto;
-  max-width: 370px;
-
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.5;
-  text-align: center;
-
-  color: getColor("title");
-
-  @media screen and (min-width: 1200px) {
-    line-height: 1.15;
-    max-width: unset;
-  }
-}
-
-.modal__form {
-  width: 370px;
-
-  @media screen and (min-width: 768px) {
+    &:hover,
+    &:focus {
+      color: getColor("accent-light");
+    }
   }
 
-  @media screen and (min-width: 1200px) {
-    width: 448px;
-  }
-}
-
-.modal__field {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-
-  &:not(:last-child) {
-    margin-bottom: 10px;
+  &__icon--close {
+    fill: currentColor;
   }
 
-  &:focus-within .modal__icon {
-    fill: getColor("accent-light");
+  &__title {
+    display: block;
+    margin: 0 auto 12px auto;
+    max-width: 370px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+
+    color: getColor("title");
+
+    @media screen and (min-width: 1200px) {
+      line-height: 1.15;
+      max-width: unset;
+    }
   }
-}
 
-.modal__label {
-  margin-bottom: 4px;
+  &__field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
 
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-}
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
 
-.modal__input {
-  padding: 12px 12px 12px 40px;
-  width: 100%;
-  border: 1px solid getColor("modal-field-border");
-  border-radius: 4px;
-  outline-color: getColor("accent-light");
-}
+    &:focus-within .modal__icon {
+      fill: getColor("accent-light");
+    }
+  }
 
-.modal__icon {
-  position: absolute;
-  left: 15px;
-  bottom: 50%;
-  transform: translateY(100%);
-}
+  &__label {
+    margin-bottom: 4px;
 
-.modal__field--comment {
-  & textarea {
-    resize: none;
-    padding: 12px 16px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+  }
+
+  &__input {
+    padding: 12px 12px 12px 40px;
+    width: 100%;
     border: 1px solid getColor("modal-field-border");
     border-radius: 4px;
     outline-color: getColor("accent-light");
   }
-  &::placeholder {
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
 
-    color: getColor("placeholder");
+  &__icon {
+    position: absolute;
+    left: 15px;
+    bottom: 50%;
+    transform: translateY(100%);
+  }
+
+  &__field--comment {
+    & textarea {
+      resize: none;
+      padding: 12px 16px;
+      border: 1px solid getColor("modal-field-border");
+      border-radius: 4px;
+      outline-color: getColor("accent-light");
+    }
+    &::placeholder {
+      font-size: 12px;
+      line-height: 1.17;
+      letter-spacing: 0.01em;
+
+      color: getColor("placeholder");
+    }
+  }
+
+  &__button--submit {
+    display: block;
+    margin: 0 auto;
+    @include button();
   }
 }
 
 .policy {
-  @include centeredFlex();
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 
   margin-top: 20px;
@@ -172,44 +159,60 @@
 
   font-size: 12px;
   line-height: 1.17;
+  letter-spacing: 0.03em;
 
   @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 1.71;
   }
-}
 
-.policy__checkbox {
-  appearance: none;
-}
-
-.policy__icon {
-  border: 2px solid getColor("title");
-  border-radius: 2px;
-  margin-right: 7px;
-  fill: transparent;
-
-  transition: fill 250ms $cubic-bezier, outline-color 250ms $cubic-bezier;
-
-  .policy__checkbox:focus + & {
-    outline-style: auto;
-    outline-color: getColor("accent-dark");
+  &__checkbox {
+    appearance: none;
   }
-  .policy__checkbox:checked + & {
-    fill: getColor("accent-light");
-    border: none;
+
+  &__icon {
+    border: 2px solid getColor("title");
+    border-radius: 2px;
+    margin-right: 7px;
+    fill: transparent;
+
+    transition: fill 250ms $cubic-bezier, outline-color 250ms $cubic-bezier;
+
+    .policy__checkbox:focus + & {
+      outline-style: auto;
+      outline-color: getColor("accent-dark");
+    }
+    .policy__checkbox:checked + & {
+      fill: getColor("accent-light");
+      border: none;
+    }
+    .policy__checkbox:checked:focus + & {
+      outline-color: getColor("title");
+    }
   }
-  .policy__checkbox:checked:focus + & {
-    outline-color: getColor("title");
+
+  &__link {
+    color: getColor("accent-light");
   }
 }
 
-.policy__link {
-  color: getColor("accent-light");
-}
+.staff__item {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 
-.modal__button--submit {
-  display: block;
-  margin: 0 auto;
-  @include button();
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(100% / 2 - 30px);
+      margin-left: 30px;
+      margin-top: 30px;
+      background-color: var(--page-color);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+  }
 }
