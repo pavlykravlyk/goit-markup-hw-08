@@ -1,68 +1,67 @@
 .team {
   background-color: getColor("bg-secondary");
-}
 
-.team__list {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-
-    margin-top: calc(-1 * #{$gridItemMargin});
-    margin-left: calc(-1 * #{$gridItemMargin});
-  }
-}
-
-.team__item {
-  background-color: getColor("white");
-  border-radius: 0px 0px 4px 4px;
-  box-shadow: $team-card-shadow;
-
-  @media screen and (min-width: 768px) {
-    flex-basis: calc(100% / 2 - #{$gridItemMargin});
-    margin-left: $gridItemMargin;
-    margin-top: $gridItemMargin;
-  }
-  @media screen and (min-width: 1200px) {
-    flex-basis: calc(100% / 4 - #{$gridItemMargin});
-  }
-
-  &:not(:last-child) {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 30px;
+  &__list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(-1 * #{$gridItemMargin});
+      margin-left: calc(-1 * #{$gridItemMargin});
     }
   }
-}
 
-.team__content {
-  padding: 30px 32px;
-  text-align: center;
-}
+  &__item {
+    background-color: getColor("white");
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: $team-card-shadow;
 
-.team__image {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(100% / 2 - #{$gridItemMargin});
+      margin-left: $gridItemMargin;
+      margin-top: $gridItemMargin;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc(100% / 4 - #{$gridItemMargin});
+    }
 
-.team__title {
-  margin-top: 0;
-  margin-bottom: 10px;
+    &:not(:last-child) {
+      @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+      }
+    }
+  }
 
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
+  &__content {
+    padding: 30px 32px;
+    text-align: center;
+  }
 
-  color: getColor("title");
-}
+  &__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
 
-.team__text {
-  margin-top: 0;
-  margin-bottom: 16px;
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
 
-  font-size: 16px;
-  line-height: 1.19;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
 
-  color: getColor("text");
+    color: getColor("title");
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    line-height: 1.19;
+
+    color: getColor("text");
+  }
 }
 
 .social__link--gray {

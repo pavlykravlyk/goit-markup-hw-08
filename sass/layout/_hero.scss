@@ -47,26 +47,26 @@
     background-image: linear-gradient(#2f303a66, #2f303a66),
       url(../images/hero/hero-desktop@2x.jpg);
   }
-}
 
-.hero__title {
-  margin: 0 auto 30px auto;
+  &__title {
+    margin: 0 auto 30px auto;
 
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 26px;
-  line-height: 1.62;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
 
-  color: getColor("white");
+    color: getColor("white");
 
-  @media screen and (min-width: 1200px) {
-    font-size: 44px;
-    line-height: 1.36;
+    @media screen and (min-width: 1200px) {
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
-}
 
-.hero__button {
-  display: inline-block;
-  text-align: inherit;
-  @include button();
+  &__button {
+    display: inline-block;
+    text-align: inherit;
+    @include button();
+  }
 }

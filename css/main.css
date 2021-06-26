@@ -1104,12 +1104,6 @@ body.modal-open {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-width: 480px) {
-  .backdrop {
-    padding: 93px 15px 0 15px;
-  }
-}
-
 .is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -1142,7 +1136,7 @@ body.modal-open {
 }
 
 .modal__button--close {
-  position: absolute;
+  position: fixed;
   top: 8px;
   right: 8px;
   padding: 0;

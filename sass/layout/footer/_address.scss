@@ -1,28 +1,27 @@
 .address {
-}
+  &__link {
+    color: rgba(255, 255, 255, 0.6);
 
-.address__link {
-  color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    line-height: 1.71;
 
-  font-style: normal;
-  line-height: 1.71;
+    transition: color 250ms $cubic-bezier;
 
-  transition: color 250ms $cubic-bezier;
+    &:hover,
+    &:focus {
+      color: getColor("accent-light");
+    }
 
-  &:hover,
-  &:focus {
-    color: getColor("accent-light");
+    &--physical {
+      color: getColor("white");
+
+      font-style: normal;
+      font-size: 14px;
+      line-height: 1.71;
+    }
   }
-}
 
-.address__link--physical {
-  color: getColor("white");
-
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-}
-
-.address__item:not(:last-child) {
-  margin-bottom: 9px;
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
